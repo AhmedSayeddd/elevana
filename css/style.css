@@ -1,0 +1,1240 @@
+:root {
+    /* تعريف متغيرات الألوان - Light Mode */
+    --united-nations-blue: hsl(214, 56%, 58%);
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --black-coral: hsl(225, 8%, 42%);
+    --oxford-blue: hsl(208, 97%, 12%);
+    --yale-blue: hsl(214, 72%, 33%);
+    --blue-ncs: hsl(197, 100%, 36%);
+    --gunmetal: hsl(206, 34%, 20%);
+    --gainsboro: hsl(0, 0%, 88%);
+    --cultured: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --onyx: hsl(0, 0%, 25%);
+    --jet: hsl(0, 0%, 20%);
+
+    /* New accent colors */
+    --accent-color: hsl(214, 70%, 51%);
+    --accent-color-hover: hsl(214, 70%, 41%);
+    --accent-color-light: hsl(214, 70%, 91%);
+    --success-color: hsl(145, 63%, 42%);
+    --warning-color: hsl(45, 100%, 51%);
+    --error-color: hsl(354, 70%, 54%);
+
+    /* Background and text colors */
+    --bg-primary: hsl(0, 0%, 100%);
+    --bg-secondary: hsl(0, 0%, 98%);
+    --bg-tertiary: hsl(0, 0%, 95%);
+    --text-primary: hsl(0, 0%, 20%);
+    --text-secondary: hsl(0, 0%, 40%);
+    --text-tertiary: hsl(0, 0%, 60%);
+    --border-color: hsl(0, 0%, 85%);
+    --shadow-color: hsla(0, 0%, 0%, 0.1);
+
+    /* تعريف الخطوط */
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-montserrat: "Montserrat", sans-serif;
+
+    /* تعريف أحجام الخطوط بمرونة */
+    --fs-1: calc(20px + 3.5vw);
+    --fs-2: calc(18px + 1.6vw);
+    --fs-3: calc(16px + 0.45vw);
+    --fs-4: 15px;
+    --fs-5: 14px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 11px;
+
+    /* تعريف سماكات الخطوط */
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /* تعريف الانتقالات */
+    --transition: 0.25s ease-in-out;
+
+    /* تعريف المسافات العامة */
+    --section-padding: 60px;
+
+    /* تعريف أنصاف الأقطار */
+    --radius-15: 15px;
+    --radius-25: 25px;
+    --radius-pill: 100px;
+
+    /* Box shadows */
+    --shadow-sm: 0 2px 4px var(--shadow-color);
+    --shadow-md: 0 4px 8px var(--shadow-color);
+    --shadow-lg: 0 8px 16px var(--shadow-color);
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --accent-color: hsl(214, 70%, 60%);
+    --accent-color-hover: hsl(214, 70%, 70%);
+    --accent-color-light: hsl(214, 30%, 25%);
+
+    --bg-primary: hsl(220, 10%, 12%);
+    --bg-secondary: hsl(220, 10%, 17%);
+    --bg-tertiary: hsl(220, 10%, 22%);
+    --text-primary: hsl(0, 0%, 95%);
+    --text-secondary: hsl(0, 0%, 80%);
+    --text-tertiary: hsl(0, 0%, 65%);
+    --border-color: hsl(220, 10%, 30%);
+    --shadow-color: hsla(0, 0%, 0%, 0.3);
+
+    --gunmetal: hsl(206, 34%, 15%);
+    --cultured: hsl(220, 10%, 17%);
+    --white: hsl(220, 10%, 12%);
+    --black: hsl(0, 0%, 95%);
+    --onyx: hsl(0, 0%, 80%);
+    --jet: hsl(0, 0%, 85%);
+    --gainsboro: hsl(220, 10%, 25%);
+}
+
+/* إزالة الهوامش والمسافات الافتراضية وضبط حساب الأبعاد */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* إزالة النقط من القوائم */
+li {
+    list-style: none;
+}
+
+/* إزالة التسطير الافتراضي من الروابط */
+a {
+    text-decoration: none;
+}
+
+/* ضبط العناصر القابلة للعرض كعناصر بلوك */
+a,
+img,
+span,
+input,
+label,
+button,
+ion-icon {
+    display: block;
+}
+
+/* إزالة الإطارات والخلفيات الافتراضية من الإدخالات والأزرار */
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    /* يجعل الخط متناسقًا مع النص */
+}
+
+/* تغيير مؤشر الفأرة عند التمرير فوق الأزرار */
+button {
+    cursor: pointer;
+}
+
+/* جعل الإدخالات تمتد بعرض كامل داخل الحاويات */
+input {
+    width: 100%;
+}
+
+/* منع الأيقونات من التفاعل مع الماوس */
+ion-icon {
+    pointer-events: none;
+}
+
+/* ضبط الخط الأساسي للموقع */
+html {
+    font-family: var(--ff-poppins);
+    scroll-behavior: smooth;
+    /* يجعل التمرير سلسًا */
+}
+
+/* ضبط لون خلفية الموقع */
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* إعادة استخدام الأنماط */
+
+/* حاوية تحتوي على تباعد داخلي أفقي */
+.container {
+    padding-inline: 15px;
+}
+
+
+
+.logo-text {
+    font-family: var(--ff-montserrat);
+    color: var(--white);
+}
+
+/* أنماط العناوين */
+.h1,
+.h2,
+.h3 {
+    font-weight: var(--fw-800);
+    font-family: var(--ff-montserrat);
+    text-transform: uppercase;
+}
+
+/* أنماط العنوان الرئيسي - Main Title Styles */
+.h1 {
+    color: var(--white);
+    font-size: var(--fs-1);
+    position: relative;
+    /* تحديد موضع نسبي للعنصر */
+    overflow: hidden;
+    /* إخفاء أي محتوى يتجاوز الحدود */
+}
+
+/* أنماط تأثير الحروف المتساقطة - Falling Letters Animation Styles */
+.letter-animation {
+    display: inline-block;
+    /* عرض كل حرف كعنصر مستقل */
+    opacity: 0;
+    /* بدء الحروف مخفية */
+    transform: translateY(-50px);
+    /* موضع بدء الحروف (فوق الموضع النهائي) */
+    animation-name: fallIn;
+    /* اسم الرسوم المتحركة */
+    animation-duration: 0.5s;
+    /* مدة الرسوم المتحركة */
+    animation-fill-mode: forwards;
+    /* الاحتفاظ بالحالة النهائية */
+}
+
+/* تعريف الرسوم المتحركة للحروف المتساقطة */
+@keyframes fallIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        /* بداية من فوق */
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(10px);
+        /* تجاوز قليل للموضع النهائي */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* الموضع النهائي */
+    }
+}
+
+/* أنماط العناوين الفرعية */
+.h2,
+.h3 {
+    color: var(--gunmetal);
+}
+
+/* حجم العنوان الثاني */
+.h2 {
+    font-size: var(--fs-2);
+}
+
+/* حجم العنوان الثالث مع سماكة مختلفة */
+.h3 {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
+}
+
+/* أنماط النصوص المساعدة */
+.section-subtitle {
+    color: var(--bright-navy-blue);
+    font-size: var(--fs-5);
+    text-transform: uppercase;
+    font-family: var(--ff-montserrat);
+    margin-bottom: 8px;
+}
+
+/* تباعد للعنوان الرئيسي داخل الأقسام */
+.section-title {
+    margin-bottom: 15px;
+}
+
+/* أنماط النصوص داخل الأقسام */
+.section-text {
+    color: var(--black-coral);
+    margin-bottom: 30px;
+}
+/* HEADER */
+.header {
+    position: absolute;
+    /* يجعل العنصر مطلق الموضع بالنسبة لأقرب عنصر نسبي */
+    top: 0;
+    /* يضع العنصر في أعلى الصفحة */
+    left: 0;
+    /* يضع العنصر في أقصى اليسار */
+    width: 100%;
+    /* يجعل عرض العنصر يغطي العرض بالكامل */
+    padding-top: 61px;
+    /* يضيف مسافة داخلية من الأعلى */
+    z-index: 4;
+    /* يحدد أولوية العرض بالنسبة للعناصر الأخرى */
+}
+
+.header-top {
+    position: absolute;
+    /* يجعل العنصر عائمًا فوق العناصر الأخرى */
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: var(--transition);
+    /* يضيف تأثير انتقال سلس عند التغيير */
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    /* يضيف خطًا سفليًا شبه شفاف */
+    padding-block: 15px;
+    /* يضيف تباعدًا عموديًا */
+    z-index: 1;
+}
+
+.header.active .header-top {
+    position: fixed;
+    /* يبقي العنصر ثابتًا عند التمرير */
+    background: var(--gunmetal);
+    /* يغير لون الخلفية */
+}
+
+.header-top .container {
+    display: grid;
+    /* يستخدم التخطيط الشبكي */
+    grid-template-columns: repeat(3, 1fr);
+    /* يوزع المحتوى على 3 أعمدة متساوية */
+    justify-items: flex-start;
+    /* يحدد محاذاة العناصر في بداية كل عمود */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+}
+
+.helpline-box .wrapper {
+    display: none;
+    /* يخفي العنصر */
+}
+
+.helpline-box .icon-box {
+    background: var(--bright-navy-blue);
+    /* يحدد لون الخلفية */
+    padding: 6px;
+    /* يضيف مسافة داخلية */
+    border-radius: 50%;
+    /* يجعل الشكل دائريًا */
+    color: var(--white);
+    /* يحدد لون النص */
+}
+
+.helpline-box .icon-box ion-icon {
+    --ionicon-stroke-width: 40px;
+    /* يحدد سماكة الأيقونة */
+}
+
+.header-top .logo {
+    margin-inline: auto;
+    /* يجعل الشعار في المنتصف أفقيًا */
+}
+
+.header-top .logo img {
+    max-width: 100px;
+    /* يحدد الحد الأقصى لعرض الصورة */
+}
+
+.header-btn-group {
+    justify-self: flex-end;
+    /* يجعل العناصر في نهاية الصف */
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    gap: 10px;
+    /* يضيف مسافة بين العناصر */
+    color: var(--white);
+    /* يحدد لون النص */
+}
+
+.nav-open-btn,
+.theme-toggle-btn {
+    font-size: 30px;
+    /* يحدد حجم الخط */
+    color: inherit;
+    /* يأخذ لون النص من العنصر الأب */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.nav-open-btn:hover,
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+
+
+/* Autocomplete dropdown */
+.autocomplete-items {
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    z-index: 99;
+    width: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--gunmetal);
+    transition: background 0.2s ease;
+}
+
+.autocomplete-items div:hover {
+    background-color: var(--cultured);
+}
+
+.header-bottom {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    /* يضيف خطًا سفليًا شفافًا */
+}
+
+.header-bottom .container {
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    justify-content: space-between;
+    /* يوزع العناصر بالتساوي */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    padding-block: 15px;
+    /* يضيف تباعدًا عموديًا */
+}
+
+.social-list {
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    gap: 5px;
+    /* يحدد مسافة بين الأيقونات */
+}
+
+.social-link {
+    color: var(--white);
+    /* يحدد لون الأيقونات */
+    padding: 8px;
+    /* يضيف مسافة داخلية */
+    border: 1px solid hsla(0, 0%, 100%, 0.3);
+    /* يضيف حدود شبه شفافة */
+    border-radius: 50%;
+    /* يجعل الأيقونات دائرية */
+    font-size: 15px;
+    /* يحدد حجم الأيقونة */
+    transition: var(--transition);
+    /* يضيف تأثير انتقال */
+}
+
+.social-link:is(:hover, :focus) {
+    background: hsla(0, 0%, 100%, 0.2);
+    /* يغير لون الخلفية عند التحويم أو التركيز */
+}
+
+.header .btn {
+    --padding: 4px 20px;
+    /* يحدد التباعد الداخلي للزر */
+}
+
+.header .navbar {
+    position: fixed;
+    /* يجعل القائمة ثابتة */
+    top: 0;
+    right: -300px;
+    /* يخفي القائمة خارج الشاشة */
+    width: 100%;
+    max-width: 300px;
+    /* يحدد الحد الأقصى للعرض */
+    height: 100%;
+    background: var(--white);
+    /* يحدد لون الخلفية */
+    visibility: hidden;
+    /* يخفي القائمة */
+    pointer-events: none;
+    /* يمنع التفاعل مع العنصر */
+    transition: 0.15s ease-in;
+    /* يضيف تأثير انتقال عند الفتح */
+    z-index: 3;
+}
+
+.navbar.active {
+    right: 0;
+    /* يُظهر القائمة */
+    visibility: visible;
+    /* يجعلها مرئية */
+    pointer-events: all;
+    /* يسمح بالتفاعل مع العنصر */
+    transition: 0.25s ease-out;
+    /* يضيف تأثير خروج سلس */
+}
+
+.navbar-top {
+    display: flex;
+    /* يستخدم التخطيط المرن */
+    justify-content: space-between;
+    /* يوزع العناصر بالتساوي */
+    align-items: center;
+    /* يوسّط العناصر عموديًا */
+    padding: 40px 15px;
+    /* يحدد التباعد الداخلي */
+}
+
+.navbar-top .logo img {
+    width: 150px;
+    /* يحدد عرض الشعار */
+}
+
+.nav-close-btn {
+    font-size: 20px;
+    /* يحدد حجم زر الإغلاق */
+    color: var(--bright-navy-blue);
+    /* يحدد لون الزر */
+}
+
+.nav-close-btn ion-icon {
+    --ionicon-stroke-width: 80px;
+    /* يحدد سماكة الأيقونة */
+}
+
+.navbar-list {
+    border-top: 1px solid hsla(0, 0%, 0%, 0.1);
+    /* يضيف خطًا علويًا */
+}
+
+.navbar-list li {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+    /* يضيف خطًا سفليًا بين العناصر */
+}
+
+.navbar-link {
+    padding: 15px 20px;
+    /* يحدد المسافة الداخلية */
+    color: var(--jet);
+    /* يحدد لون النص */
+    font-weight: var(--fw-500);
+    /* يحدد سماكة الخط */
+    font-size: var(--fs-4);
+    /* يحدد حجم الخط */
+    transition: var(--transition);
+    /* يضيف تأثير انتقال */
+    text-transform: capitalize;
+    /* يجعل أول حرف كبيرًا */
+}
+
+.navbar-link:is(:hover, :focus) {
+    color: var(--bright-navy-blue);
+    /* يغير لون الرابط عند التحويم أو التركيز */
+}
+
+.overlay {
+    position: fixed;
+    /* يجعل الخلفية ثابتة */
+    inset: 0;
+    /* يملأ الشاشة بالكامل */
+    background: var(--black);
+    /* يحدد لون الخلفية */
+    opacity: 0;
+    /* يجعل العنصر غير مرئي */
+    pointer-events: none;
+    /* يمنع التفاعل معه */
+    z-index: 2;
+    /* يحدد طبقة الظهور */
+    transition: var(--transition);
+    /* يضيف تأثير انتقال */
+}
+
+.overlay.active {
+    opacity: 0.7;
+    /* يجعل الخلفية شفافة جزئيًا عند التفعيل */
+    pointer-events: all;
+    /* يسمح بالتفاعل عند تفعيل العنصر */
+}
+
+
+
+
+/* HERO */
+.hero {
+    background-image: url("../pic/image1.png");
+    /* تعيين الصورة الأولى كخلفية */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, 0.395);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+
+    display: grid;
+    place-items: center;
+    min-height: 600px;
+    text-align: center;
+    padding-top: 125px;
+
+    animation: changeBackground 25s infinite;
+    /* تشغيل الأنيميشن بشكل متكرر كل 25 ثانية */
+}
+
+/* INTERACTIVE WORLD MAP */
+.world-map {
+    padding-block: var(--section-padding);
+    background-color: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Flags Container */
+.flags-container {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-15);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.flags-container h3 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    font-size: var(--fs-3);
+}
+
+.flags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.flag-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    border-radius: var(--radius-15);
+    width: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.flag-item:hover {
+    transform: translateY(-5px);
+    background-color: var(--bg-tertiary);
+    box-shadow: var(--shadow-md);
+}
+
+.flag-item:hover .country-image img {
+    transform: scale(1.1);
+}
+
+.country-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    z-index: 2;
+    background-color: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--bg-primary);
+}
+
+.country-image {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.country-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.flag-item p {
+    margin-top: 5px;
+    font-size: var(--fs-5);
+    color: var(--text-primary);
+    font-weight: var(--fw-600);
+    text-align: center;
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    border-radius: var(--radius-15);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background-color: var(--bg-primary);
+}
+
+#interactive-map {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-tertiary);
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: calc(100% - 40px);
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-15);
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.map-info {
+    color: var(--text-primary);
+}
+
+.map-info h3 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    font-size: var(--fs-4);
+}
+
+.map-info p {
+    color: var(--text-secondary);
+    font-size: var(--fs-5);
+    line-height: 1.5;
+}
+
+/* Country highlight styles */
+.country-highlight {
+    fill: var(--accent-color);
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.country-highlight:hover {
+    fill: var(--accent-color-hover);
+}
+
+/* Map controls */
+.map-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.map-control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.map-control-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+/* Map Loading Indicator */
+.map-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.map-loading p {
+    margin-top: 15px;
+    color: var(--text-primary);
+    font-size: var(--fs-4);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--bg-tertiary);
+    border-top: 5px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* انيميشن تغيير الصور */
+@keyframes changeBackground {
+    0% {
+        background-image: url("../pic/WhatsApp\ Image\ 2025-06-02\ at\ 18.17.52.jpeg");
+    }
+
+    20% {
+        background-image: url("../pic/WhatsApp\ Image\ 2025-06-02\ at\ 18.17.53.jpeg");
+    }
+
+    40% {
+        background-image: url("../pic/WhatsApp\ Image\ 2025-06-02\ at\ 18.17.53\ \(1\).jpeg");
+    }
+
+    60% {
+        background-image: url("../pic/WhatsApp\ Image\ 2025-06-02\ at\ 18.17.53\ \(2\).jpeg");
+    }
+
+    80% {
+        background-image: url("../pic/WhatsApp\ Image\ 2025-06-02\ at\ 18.17.53\(6\).jpeg");
+    }
+
+    100% {
+        background-image: url("../pic/WhatsApp\ Image\ 2025-06-02\ at\ 18.17.54.jpeg");
+    }
+}
+
+/* تنسيق عنوان القسم الرئيسي */
+.hero-title {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* تنسيق نص القسم الرئيسي */
+.hero-text {
+    color: var(--white);
+    font-size: var(--fs-5);
+    margin-bottom: 40px;
+}
+
+/* about us */
+.glow-border {
+  position: relative;
+  border-radius: 1rem;
+  padding: 4px;
+  background: linear-gradient(45deg, red, blue, green, yellow, purple);
+  background-size: 400% 400%;
+  animation: glowing 6s linear infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glow-border .inner {
+  border-radius: 1rem;
+  background-color: #1f2937; /* Tailwind's gray-800 */
+  overflow: hidden;
+}
+
+/* Our Partners */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-strip {
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.group:hover .logo-strip {
+  animation-play-state: paused;
+}
+
+
+
+
+/* FOOTER */
+.footer-copyright {
+    --gunmetal: hsl(205, 36%, 17%);
+    /* تعريف متغير للون الخلفية */
+    background: var(--gunmetal);
+    /* تطبيق لون الخلفية */
+    display: flex;
+    /* استخدام Flexbox لتنسيق العناصر داخله */
+    justify-content: center;
+    /* محاذاة المحتوى أفقيًا في المنتصف */
+    align-items: center;
+    /* محاذاة المحتوى عموديًا في المنتصف */
+    height: 40px;
+    /* تحديد ارتفاع الفوتر */
+    width: 100%;
+    /* جعل الفوتر يمتد بكامل عرض الصفحة */
+    position: relative;
+    /* يساعد في ضبط المحاذاة داخل الحاوية */
+    top: 40px;
+}
+
+.copyright {
+    color: var(--gainsboro);
+    /* تحديد لون النص */
+    font-size: var(--fs-5);
+    /* استخدام متغير لحجم الخط */
+    margin: 0;
+    /* إزالة الهوامش الافتراضية لضمان محاذاة النص بشكل صحيح */
+}
+
+
+
+/* UP TO GO */
+.go-top {
+    position: fixed;
+    /* تثبيت العنصر في مكانه عند التمرير */
+    bottom: 15px;
+    /* تحديد المسافة من الأسفل */
+    right: 15px;
+    /* تحديد المسافة من اليمين */
+    width: 35px;
+    /* تحديد عرض الزر */
+    height: 35px;
+    /* تحديد ارتفاع الزر */
+    background: var(--bright-navy-blue);
+    /* تعيين لون الخلفية */
+    color: var(--white);
+    /* تعيين لون النص */
+    display: grid;
+    /* استخدام تخطيط الشبكة لتوسيط الأيقونة داخل الزر */
+    place-items: center;
+    /* توسيط المحتوى أفقياً وعمودياً */
+    font-size: 18px;
+    /* تحديد حجم الأيقونة داخل الزر */
+    border-radius: 6px;
+    /* تدوير زوايا الزر */
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+    /* إضافة ظل للزر */
+    opacity: 0;
+    /* إخفاء الزر بشكل افتراضي */
+    transform: translateY(10px);
+    /* تحريك الزر لأسفل قليلاً لإضافة تأثير عند الظهور */
+    visibility: hidden;
+    /* إخفاء العنصر حتى يتم التمرير */
+    transition: var(--transition);
+    /* تفعيل تأثير الانتقال */
+}
+
+/* عند تفعيل الزر عند التمرير */
+.go-top.active {
+    opacity: 0.8;
+    /* جعله شبه شفاف */
+    transform: translateY(0);
+    /* إعادته إلى موقعه الطبيعي */
+    visibility: visible;
+    /* إظهاره */
+}
+
+/* عند تمرير الماوس فوق الزر أو عند التركيز عليه */
+.go-top:is(:hover, :focus) {
+    opacity: 1;
+    /* جعله مرئيًا بالكامل */
+}
+
+/* MEDIA QUERIES - تعديلات التصميم حسب حجم الشاشة */
+/* شاشات بعرض 580 بكسل فأكثر */
+@media (min-width: 580px) {
+    .container {
+        max-width: 580px;
+        /* تحديد الحد الأقصى للعرض */
+        margin-inline: auto;
+        /* توسيط العنصر */
+    }
+
+    .btn {
+        --fs-5: 16px;
+        /* ضبط حجم الخط */
+        --padding: 12px 30px;
+        /* ضبط الحواف الداخلية */
+    }
+
+    section:not(.cta) :is(.section-subtitle, .section-title, .section-text) {
+        text-align: center;
+        /* توسيط النصوص */
+    }
+
+    .section-text {
+        margin-bottom: 40px;
+        /* إضافة مسافة أسفل النص */
+    }
+
+    .card-text {
+        --fs-5: 15px;
+        /* حجم النص داخل البطاقات */
+    }
+
+    .header {
+        padding-top: 83px;
+        /* تعديل المسافة العلوية للهيدر */
+    }
+
+    .helpline-box .icon-box {
+        padding: 14px;
+        /* ضبط الحواف الداخلية لأيقونات الدعم */
+    }
+
+    .header-top .logo img {
+        max-width: unset;
+        /* إزالة الحد الأقصى لحجم الشعار */
+    }
+
+    .search-btn {
+        font-size: 30px;
+        /* تكبير زر البحث */
+    }
+
+    .nav-open-btn {
+        font-size: 40px;
+        /* تكبير زر فتح القائمة */
+    }
+
+    .header .btn {
+        --fs-5: 14px;
+        /* تصغير حجم الخط داخل الأزرار */
+        --padding: 6px 20px;
+        /* ضبط المسافات الداخلية للأزرار */
+    }
+
+    .hero {
+        min-height: 800px;
+        /* تحديد الحد الأدنى لارتفاع قسم البطل */
+        padding-top: 85px;
+        /* تعديل المسافة العلوية */
+    }
+
+    .hero-text {
+        --fs-5: 15px;
+        /* حجم النص داخل قسم البطل */
+    }
+
+    .popular-card .card-content {
+        right: auto;
+        /* إزالة التحديد الأيمن لمحتوى البطاقة */
+    }
+}
+
+/* شاشات بعرض 768 بكسل فأكثر */
+@media (min-width: 768px) {
+    :root {
+        --fs-5: 15px;
+        /* ضبط حجم النص الأساسي */
+    }
+
+    .container {
+        max-width: 800px;
+        /* زيادة عرض الحاوية */
+    }
+
+    .section-text {
+        max-width: 60ch;
+        /* تحديد الحد الأقصى لطول النص */
+        margin-inline: auto;
+        /* توسيط النص */
+    }
+
+    .helpline-box {
+        display: flex;
+        /* جعل المحتوى في صف واحد */
+        justify-content: flex-start;
+        /* محاذاة العناصر لليسار */
+        align-items: center;
+        /* توسيط العناصر عموديًا */
+        gap: 10px;
+        /* تحديد المسافة بين العناصر */
+    }
+
+    .helpline-box .wrapper {
+        display: block;
+        /* جعل العنصر عنصر بلوك */
+        color: var(--white);
+        /* تحديد لون النص */
+        font-size: var(--fs-6);
+        /* ضبط حجم الخط */
+    }
+
+    .social-list {
+        gap: 10px;
+        /* تحديد المسافة بين عناصر القائمة الاجتماعية */
+    }
+}
+
+/* شاشات بعرض 992 بكسل فأكثر */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1050px;
+        /* زيادة الحد الأقصى لعرض الحاوية */
+    }
+
+    .header.active .header-top {
+        position: unset;
+        /* إلغاء التموضع الافتراضي */
+        background: unset;
+        /* إزالة الخلفية */
+    }
+
+    .nav-open-btn,
+    .navbar-top {
+        display: none;
+        /* إخفاء زر فتح القائمة */
+    }
+
+    .header-bottom {
+        border-bottom: none;
+        /* إزالة الحد السفلي للهيدر */
+    }
+
+    .header.active .header-bottom {
+        position: fixed;
+        /* جعل الهيدر ثابت عند التمرير */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        /* تغيير الخلفية */
+        color: var(--onyx);
+        /* تغيير اللون */
+        box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.08);
+        /* إضافة ظل */
+        transition: var(--transition);
+        /* تفعيل تأثير الانتقال */
+    }
+
+    .header-bottom .container {
+        padding-block: 0;
+        /* إزالة الحواف العلوية والسفلية */
+    }
+
+    .header .navbar {
+        all: unset;
+        /* إعادة تعيين جميع القيم الافتراضية */
+    }
+
+    .navbar-list {
+        border-top: none;
+        /* إزالة الحد العلوي */
+        display: flex;
+        /* عرض القائمة أفقياً */
+        justify-content: center;
+        /* توسيط العناصر */
+        align-items: center;
+        /* توسيط عمودي */
+    }
+
+    .navbar-link {
+        color: var(--white);
+        /* تغيير لون الروابط */
+        --fs-4: 16px;
+        font-weight: unset;
+        text-transform: uppercase;
+        /* جعل النصوص بأحرف كبيرة */
+        padding: 20px 15px;
+        /* ضبط التباعد الداخلي */
+    }
+
+    .header.active .navbar-link {
+        color: var(--onyx);
+        /* تغيير لون الروابط عند تفعيل الهيدر */
+    }
+
+    .header.active .navbar-link:is(:hover, :focus) {
+        color: var(--bright-navy-blue);
+        /* تغيير اللون عند التمرير */
+    }
+
+    .header.active .social-link {
+        color: var(--onyx);
+        border-color: hsla(0, 0%, 0%, 0.15);
+        /* تغيير لون الحدود */
+    }
+
+    .overlay {
+        display: none;
+        /* إخفاء طبقة التعتيم */
+    }
+
+    .hero .container {
+        max-width: 740px;
+        /* ضبط عرض محتوى قسم البطل */
+    }
+
+    .popular-list {
+        grid-template-columns: repeat(3, 1fr);
+        /* عرض 3 أعمدة */
+    }
+
+    .meta-box {
+        --fs-8: 13px;
+    }
+
+    .meta-box>ion-icon {
+        font-size: 15px;
+    }
+}
+
+/* شاشات بعرض 1200 بكسل فأكثر */
+@media (min-width: 1200px) {
+    :root {
+        --section-padding: 100px;
+        /* زيادة المسافة بين الأقسام */
+    }
+
+    .container {
+        max-width: 1180px;
+        /* ضبط الحد الأقصى للعرض */
+    }
+}
